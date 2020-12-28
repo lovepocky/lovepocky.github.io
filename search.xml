@@ -27,9 +27,10 @@
   <entry>
     <title>几张照片</title>
     <url>/some-pic/</url>
-    <content><![CDATA[<p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/39962BF9-3D91-4076-8BE3-A85DD3D78F35_1_105_c.jpeg"></p>
-<p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/8E6375ED-C3F3-4A86-A240-D3D3E7E755DD_1_105_c.jpeg"></p>
-<p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/ACE01CCC-1967-4B88-9931-B0644BC36614_1_105_c.jpeg"></p>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/39962BF9-3D91-4076-8BE3-A85DD3D78F35_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/8E6375ED-C3F3-4A86-A240-D3D3E7E755DD_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/ACE01CCC-1967-4B88-9931-B0644BC36614_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/0FD08562-34EA-4B7B-9001-A05416F10D96_1_105_c.jpeg"></p>
 ]]></content>
   </entry>
 </search>
