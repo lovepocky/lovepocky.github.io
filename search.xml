@@ -33,4 +33,53 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/0FD08562-34EA-4B7B-9001-A05416F10D96_1_105_c.jpeg"></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>关于测试nestjs的工作流</title>
+    <url>/test-nestjs-workflow/</url>
+    <content><![CDATA[<p><code>填坑中</code></p>
+<h2 id="面向读者"><a href="#面向读者" class="headerlink" title="面向读者"></a>面向读者</h2><ul>
+<li>产品/项目经理: 了解开发和测试在做的事情, 重要性</li>
+<li>开发: 掌握工作流, 知道工作流覆盖的范围, 能/不能保证什么</li>
+<li>测试:<ul>
+<li>理解开发做的事情和流程, 会使用工作流的结果, 需要对开发的结果输出做严格检查</li>
+<li>基于开发的测试结果, 设计回归测试</li>
+</ul>
+</li>
+</ul>
+<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><h3 id="关于测试的几种类型"><a href="#关于测试的几种类型" class="headerlink" title="关于测试的几种类型"></a>关于测试的几种类型</h3><ul>
+<li>unit test / 单元测试</li>
+<li>integration test / 集成测试</li>
+<li>smoke test / 冒烟测试</li>
+<li>e2e test / end-to-end test / 端到端测试</li>
+<li>regression test / 回归测试</li>
+</ul>
+<h3 id="关于测试的几种方式"><a href="#关于测试的几种方式" class="headerlink" title="关于测试的几种方式"></a>关于测试的几种方式</h3><ul>
+<li>stub / mock</li>
+<li>fake</li>
+</ul>
+<h2 id="搭建一个合格的仓库-包含基本的工作流"><a href="#搭建一个合格的仓库-包含基本的工作流" class="headerlink" title="搭建一个合格的仓库, 包含基本的工作流"></a>搭建一个合格的仓库, 包含基本的工作流</h2><ul>
+<li>示例代码: <a href="https://github.com/lovepocky/sample-workflow-test-nestjs">https://github.com/lovepocky/sample-workflow-test-nestjs</a></li>
+</ul>
+<h3 id="使用的技术栈"><a href="#使用的技术栈" class="headerlink" title="使用的技术栈"></a>使用的技术栈</h3><ul>
+<li>webframework<ul>
+<li>nestjs</li>
+</ul>
+</li>
+<li>test framework<ul>
+<li>jest</li>
+</ul>
+</li>
+<li>mock/fake<ul>
+<li>mongodb-memory-server</li>
+</ul>
+</li>
+</ul>
+<h3 id="满足各种测试配置功能"><a href="#满足各种测试配置功能" class="headerlink" title="满足各种测试配置功能"></a>满足各种测试配置功能</h3>]]></content>
+      <tags>
+        <tag>workflow</tag>
+        <tag>test</tag>
+        <tag>nodejs</tag>
+        <tag>nestjs</tag>
+      </tags>
+  </entry>
 </search>
