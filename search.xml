@@ -260,7 +260,8 @@
   <entry>
     <title>搭建简单的gitlab服务,在k8s环境</title>
     <url>/setup-simple-gitlab-in-k8s/</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+    <content><![CDATA[<p><code>待填坑: 搭建runner的方案</code></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>需要维护一个私有的git仓库, gitlab比较常用而且功能强大</li>
 <li>k8s环境比较容易维护</li>
 </ul>
@@ -358,6 +359,8 @@
         <tag>gitlab</tag>
         <tag>cicd</tag>
         <tag>kubernetes</tag>
+        <tag>gitlab-pages</tag>
+        <tag>gitlab-ci</tag>
       </tags>
   </entry>
 </search>

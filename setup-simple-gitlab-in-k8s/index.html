@@ -20,21 +20,23 @@
     var CONFIG = {"hostname":"lovepocky.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atlassian的crowd gitl">
+  <meta name="description" content="待填坑: 搭建runner的方案 背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建简单的gitlab服务,在k8s环境">
 <meta property="og:url" content="https://lovepocky.github.io/setup-simple-gitlab-in-k8s/index.html">
 <meta property="og:site_name" content="lovepocky&#39;s blog">
-<meta property="og:description" content="背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atlassian的crowd gitl">
+<meta property="og:description" content="待填坑: 搭建runner的方案 背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atl">
 <meta property="og:locale">
 <meta property="og:image" content="https://docs.gitlab.com/ee/user/project/merge_requests/img/test_coverage_visualization_v12_9.png">
 <meta property="og:image" content="https://docs.gitlab.com/ee/ci/img/pipelines_junit_test_report_ui_v12_5.png">
 <meta property="article:published_time" content="2021-02-10T04:23:55.000Z">
-<meta property="article:modified_time" content="2021-02-10T06:00:16.073Z">
+<meta property="article:modified_time" content="2021-02-10T06:06:18.794Z">
 <meta property="article:author" content="lovepocky">
 <meta property="article:tag" content="gitlab">
 <meta property="article:tag" content="cicd">
 <meta property="article:tag" content="kubernetes">
+<meta property="article:tag" content="gitlab-pages">
+<meta property="article:tag" content="gitlab-ci">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.gitlab.com/ee/user/project/merge_requests/img/test_coverage_visualization_v12_9.png">
 
@@ -237,7 +239,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-02-10 12:23:55 / Modified: 14:00:16" itemprop="dateCreated datePublished" datetime="2021-02-10T12:23:55+08:00">2021-02-10</time>
+              <time title="Created: 2021-02-10 12:23:55 / Modified: 14:06:18" itemprop="dateCreated datePublished" datetime="2021-02-10T12:23:55+08:00">2021-02-10</time>
             </span>
 
           
@@ -251,7 +253,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+        <p><code>待填坑: 搭建runner的方案</code></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>需要维护一个私有的git仓库, gitlab比较常用而且功能强大</li>
 <li>k8s环境比较容易维护</li>
 </ul>
@@ -356,6 +359,8 @@
               <a href="/tags/gitlab/" rel="tag"># gitlab</a>
               <a href="/tags/cicd/" rel="tag"># cicd</a>
               <a href="/tags/kubernetes/" rel="tag"># kubernetes</a>
+              <a href="/tags/gitlab-pages/" rel="tag"># gitlab-pages</a>
+              <a href="/tags/gitlab-ci/" rel="tag"># gitlab-ci</a>
           </div>
 
         
@@ -448,7 +453,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
