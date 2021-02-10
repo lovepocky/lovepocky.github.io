@@ -20,28 +20,38 @@
     var CONFIG = {"hostname":"lovepocky.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lovepocky&#39;s blog">
-<meta property="og:url" content="https://lovepocky.github.io/index.html">
+  <meta name="description" content="背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atlassian的crowd gitl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建简单的gitlab服务,在k8s环境">
+<meta property="og:url" content="https://lovepocky.github.io/setup-simple-gitlab-in-k8s/index.html">
 <meta property="og:site_name" content="lovepocky&#39;s blog">
+<meta property="og:description" content="背景 需要维护一个私有的git仓库, gitlab比较常用而且功能强大 k8s环境比较容易维护  方案 k8s环境使用已有的环境,相关搭建不在本文范围 crowd使用已有的服务, 作为auth的服务, 这里可以按需配置 gitlab使用单个docker启动(比较简单,目前可以满足需求) GitLab Docker images   gitlab的auth使用atlassian的crowd gitl">
 <meta property="og:locale">
+<meta property="og:image" content="https://docs.gitlab.com/ee/user/project/merge_requests/img/test_coverage_visualization_v12_9.png">
+<meta property="og:image" content="https://docs.gitlab.com/ee/ci/img/pipelines_junit_test_report_ui_v12_5.png">
+<meta property="article:published_time" content="2021-02-10T04:23:55.000Z">
+<meta property="article:modified_time" content="2021-02-10T06:00:16.073Z">
 <meta property="article:author" content="lovepocky">
+<meta property="article:tag" content="gitlab">
+<meta property="article:tag" content="cicd">
+<meta property="article:tag" content="kubernetes">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.gitlab.com/ee/user/project/merge_requests/img/test_coverage_visualization_v12_9.png">
 
-<link rel="canonical" href="https://lovepocky.github.io/">
+<link rel="canonical" href="https://lovepocky.github.io/setup-simple-gitlab-in-k8s/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>lovepocky's blog</title>
+  <title>搭建简单的gitlab服务,在k8s环境 | lovepocky's blog</title>
   
 
 
@@ -196,9 +206,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -214,10 +225,9 @@
       <meta itemprop="name" content="lovepocky's blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/setup-simple-gitlab-in-k8s/" class="post-title-link" itemprop="url">搭建简单的gitlab服务,在k8s环境</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          搭建简单的gitlab服务,在k8s环境
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -241,7 +251,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>需要维护一个私有的git仓库, gitlab比较常用而且功能强大</li>
 <li>k8s环境比较容易维护</li>
 </ul>
@@ -335,558 +345,42 @@
 <li>pages, test 等都需要gitlab-ci的支持, 这部分就不在本文中记录了, 编写相关的gitlab-ci之后, 就可以实现一个项目CI时的测试覆盖, 以及项目文档维护的需求</li>
 </ul>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/gitlab/" rel="tag"># gitlab</a>
+              <a href="/tags/cicd/" rel="tag"># cicd</a>
+              <a href="/tags/kubernetes/" rel="tag"># kubernetes</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/test-type-concepts/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lovepocky">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lovepocky's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/test-type-concepts/" class="post-title-link" itemprop="url">关于测试类型的定义/释义</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-27 13:47:57" itemprop="dateCreated datePublished" datetime="2021-01-27T13:47:57+08:00">2021-01-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-28 09:53:14" itemprop="dateModified" datetime="2021-01-28T09:53:14+08:00">2021-01-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><code>填坑中</code></p>
-<h2 id="测试用语"><a href="#测试用语" class="headerlink" title="测试用语"></a>测试用语</h2><p>纬度:</p>
-<ul>
-<li>代码颗粒度: 测试套件能反映出的颗粒库<ul>
-<li>单元测试</li>
-<li>端到端测试</li>
-</ul>
-</li>
-<li>代码覆盖度: 每次执行的测试套件, 所能覆盖的代码</li>
-<li>在开发流程中的阶段:<ul>
-<li>冒烟测试</li>
-<li>回归测试</li>
-</ul>
-</li>
-<li>时间维度: 测试计划</li>
-<li>测试执行手段<ul>
-<li>自动化测试</li>
-<li>人工测试</li>
-</ul>
-</li>
-<li>良好的测试<ul>
-<li>软件的可测试性</li>
-<li>测试执行方案的有效性</li>
-<li>等等</li>
-</ul>
-</li>
-</ul>
-<p>解释:</p>
-<ul>
-<li>从软件的生命周期来说, 测试需要覆盖<ul>
-<li>研发阶段<ul>
-<li>开发阶段</li>
-<li>测试阶段</li>
-</ul>
-</li>
-<li>运行阶段</li>
-<li>版本更新阶段</li>
-</ul>
-</li>
-<li>从每次执行的测试量来说<ul>
-<li>测试用例<ul>
-<li>单元测试</li>
-<li>端到端测试</li>
-<li>其他?</li>
-</ul>
-</li>
-<li>测试套件<ul>
-<li>冒烟测试集(开发阶段-&gt;测试阶段)</li>
-<li>回归测试集(版本更新阶段)</li>
-<li>系统测试集(上线阶段?)</li>
-<li>?(运行阶段)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>测试类型用词</th>
-<th>代码粒度</th>
-<th>测试阶段</th>
-<th>代码覆盖度</th>
-<th>c</th>
-<th>d</th>
-<th>e</th>
-<th>f</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>unit test / 单元测试</td>
-<td></td>
-<td>❎</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>integration test / 集成测试</td>
-<td>✔</td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>System testing/系统测试</td>
-<td></td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>smoke test/冒烟测试</td>
-<td></td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>e2e test / 端到端测试</td>
-<td></td>
-<td>❎</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>regression test / 回归测试</td>
-<td></td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>test suite / 测试套件</td>
-<td></td>
-<td>❎</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>test plan/测试计划</td>
-<td></td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>test scenario/测试场景</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">flowchart TB</span><br><span class="line"></span><br><span class="line">subgraph 测试流程</span><br><span class="line">  integration-test(集成测试)</span><br><span class="line">  regression-test(回归测试)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">unit-test(单元测试)</span><br><span class="line">smoke-test(冒烟测试)</span><br><span class="line">e2e-test(端到端测试)</span><br><span class="line">test-suite(测试套件)</span><br><span class="line">test-plan(测试计划)</span><br><span class="line">test-scenario(测试场景)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>冒烟测试<ul>
-<li>[wiki:冒烟测试 (软件)]</li>
-<li>你真的了解什么是冒烟测试么？ - 蜗牛学院的文章 - 知乎<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/39786718">https://zhuanlan.zhihu.com/p/39786718</a></li>
-<li>求大神解释什么是冒烟测试，回归测试？ - 千锋软件测试学院的回答 - 知乎<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/53351690/answer/1287226030">https://www.zhihu.com/question/53351690/answer/1287226030</a></li>
-</ul>
-</li>
-</ul>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/test-type-concepts/" rel="prev" title="关于测试类型的定义/释义">
+      <i class="fa fa-chevron-left"></i> 关于测试类型的定义/释义
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/test-nestjs-workflow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lovepocky">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lovepocky's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/test-nestjs-workflow/" class="post-title-link" itemprop="url">关于测试nestjs的工作流</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-24 17:03:35" itemprop="dateCreated datePublished" datetime="2021-01-24T17:03:35+08:00">2021-01-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-27 20:19:21" itemprop="dateModified" datetime="2021-01-27T20:19:21+08:00">2021-01-27</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><code>填坑中</code></p>
-<h2 id="面向读者"><a href="#面向读者" class="headerlink" title="面向读者"></a>面向读者</h2><ul>
-<li>产品/项目经理: 了解开发和测试在做的事情, 重要性</li>
-<li>开发: 掌握工作流, 知道工作流覆盖的范围, 能/不能保证什么</li>
-<li>测试:<ul>
-<li>理解开发做的事情和流程, 会使用工作流的结果, 需要对开发的结果输出做严格检查</li>
-<li>基于开发的测试结果, 设计回归测试</li>
-</ul>
-</li>
-</ul>
-<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><h3 id="关于测试的几种类型"><a href="#关于测试的几种类型" class="headerlink" title="关于测试的几种类型"></a>关于测试的几种类型</h3><ul>
-<li><a href="../test-type-concepts">关于测试类型的定义/释义</a></li>
-</ul>
-<h3 id="关于测试的几种方式"><a href="#关于测试的几种方式" class="headerlink" title="关于测试的几种方式"></a>关于测试的几种方式</h3><ul>
-<li>stub / mock</li>
-<li>fake</li>
-</ul>
-<h2 id="搭建一个合格的仓库-包含基本的工作流"><a href="#搭建一个合格的仓库-包含基本的工作流" class="headerlink" title="搭建一个合格的仓库, 包含基本的工作流"></a>搭建一个合格的仓库, 包含基本的工作流</h2><ul>
-<li>示例代码: <a target="_blank" rel="noopener" href="https://github.com/lovepocky/sample-workflow-test-nestjs">https://github.com/lovepocky/sample-workflow-test-nestjs</a></li>
-</ul>
-<h3 id="使用的技术栈"><a href="#使用的技术栈" class="headerlink" title="使用的技术栈"></a>使用的技术栈</h3><ul>
-<li>webframework<ul>
-<li>nestjs</li>
-</ul>
-</li>
-<li>test framework<ul>
-<li>jest</li>
-</ul>
-</li>
-<li>mock/fake<ul>
-<li>mongodb-memory-server</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/stipsan/ioredis-mock">https://github.com/stipsan/ioredis-mock</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="满足各种测试配置功能"><a href="#满足各种测试配置功能" class="headerlink" title="满足各种测试配置功能"></a>满足各种测试配置功能</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/some-pic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lovepocky">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lovepocky's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/some-pic/" class="post-title-link" itemprop="url">几张照片</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-28 23:51:23" itemprop="dateCreated datePublished" datetime="2020-12-28T23:51:23+08:00">2020-12-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-29 00:19:36" itemprop="dateModified" datetime="2020-12-29T00:19:36+08:00">2020-12-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/39962BF9-3D91-4076-8BE3-A85DD3D78F35_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/8E6375ED-C3F3-4A86-A240-D3D3E7E755DD_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/ACE01CCC-1967-4B88-9931-B0644BC36614_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/0FD08562-34EA-4B7B-9001-A05416F10D96_1_105_c.jpeg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/hello-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lovepocky">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lovepocky's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/hello-hexo/" class="post-title-link" itemprop="url">hello-hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-26 21:29:07" itemprop="dateCreated datePublished" datetime="2020-12-26T21:29:07+08:00">2020-12-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-28 23:49:55" itemprop="dateModified" datetime="2020-12-28T23:49:55+08:00">2020-12-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="hello-Hexo"><a href="#hello-Hexo" class="headerlink" title="hello Hexo"></a>hello Hexo</h1><h2 id="local-image"><a href="#local-image" class="headerlink" title="local image"></a>local image</h2><p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/20201228234204.png" alt="github bed"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lovepocky">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lovepocky's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-26 20:16:02" itemprop="dateCreated datePublished" datetime="2020-12-26T20:16:02+08:00">2020-12-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -933,6 +427,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA"><span class="nav-number">3.</span> <span class="nav-text">搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgitlab"><span class="nav-number">3.1.</span> <span class="nav-text">配置gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ConfigMap"><span class="nav-number">3.1.1.</span> <span class="nav-text">ConfigMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deployment"><span class="nav-number">3.1.2.</span> <span class="nav-text">Deployment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PVC"><span class="nav-number">3.1.3.</span> <span class="nav-text">PVC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Service"><span class="nav-number">3.1.4.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ingress"><span class="nav-number">3.1.5.</span> <span class="nav-text">Ingress</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">3.1.6.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90"><span class="nav-number">4.</span> <span class="nav-text">搭建完成</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1052,6 +547,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8eaaeb9a6d3b18256cd5',
+      clientSecret: '359d94cb6e8f2d155e2b92bfd848238d0acb77f5',
+      repo        : 'lovepocky.github.io',
+      owner       : 'lovepocky',
+      admin       : ['lovepocky'],
+      id          : 'e112d44f73c01b5ed006b016c9941959',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
