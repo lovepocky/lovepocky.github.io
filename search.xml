@@ -186,9 +186,12 @@
       </tags>
   </entry>
   <entry>
-    <title>how-to-maintain-blog</title>
+    <title>如何维护一个博客</title>
     <url>/how-to-maintain-blog/</url>
-    <content><![CDATA[<h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 [how to maintain a blog]"></a>如何维护一个博客 [how to maintain a blog]</h1>]]></content>
+    <content><![CDATA[<h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 how to maintain a blog"></a>如何维护一个博客 how to maintain a blog</h1>]]></content>
+      <tags>
+        <tag>基础设施</tag>
+      </tags>
   </entry>
   <entry>
     <title>关于测试类型的定义/释义</title>
