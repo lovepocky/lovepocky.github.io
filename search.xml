@@ -1,22 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hello-hexo</title>
+    <url>/hello-hexo/</url>
+    <content><![CDATA[<h1 id="hello-Hexo"><a href="#hello-Hexo" class="headerlink" title="hello Hexo"></a>hello Hexo</h1><h2 id="local-image"><a href="#local-image" class="headerlink" title="local image"></a>local image</h2><p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/20201228234204.png" alt="github bed"></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Example</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>关于测试nestjs的工作流</title>
+    <url>/test-nestjs-workflow/</url>
+    <content><![CDATA[<p><code>填坑中</code></p>
+<h2 id="面向读者"><a href="#面向读者" class="headerlink" title="面向读者"></a>面向读者</h2><ul>
+<li>产品/项目经理: 了解开发和测试在做的事情, 重要性</li>
+<li>开发: 掌握工作流, 知道工作流覆盖的范围, 能/不能保证什么</li>
+<li>测试:<ul>
+<li>理解开发做的事情和流程, 会使用工作流的结果, 需要对开发的结果输出做严格检查</li>
+<li>基于开发的测试结果, 设计回归测试</li>
+</ul>
+</li>
+</ul>
+<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><h3 id="关于测试的几种类型"><a href="#关于测试的几种类型" class="headerlink" title="关于测试的几种类型"></a>关于测试的几种类型</h3><ul>
+<li><a href="../test-type-concepts">关于测试类型的定义/释义</a></li>
+</ul>
+<h3 id="关于测试的几种方式"><a href="#关于测试的几种方式" class="headerlink" title="关于测试的几种方式"></a>关于测试的几种方式</h3><ul>
+<li>stub / mock</li>
+<li>fake</li>
+</ul>
+<h2 id="搭建一个合格的仓库-包含基本的工作流"><a href="#搭建一个合格的仓库-包含基本的工作流" class="headerlink" title="搭建一个合格的仓库, 包含基本的工作流"></a>搭建一个合格的仓库, 包含基本的工作流</h2><ul>
+<li>示例代码: <a href="https://github.com/lovepocky/sample-workflow-test-nestjs">https://github.com/lovepocky/sample-workflow-test-nestjs</a></li>
+</ul>
+<h3 id="使用的技术栈"><a href="#使用的技术栈" class="headerlink" title="使用的技术栈"></a>使用的技术栈</h3><ul>
+<li>webframework<ul>
+<li>nestjs</li>
+</ul>
+</li>
+<li>test framework<ul>
+<li>jest</li>
+</ul>
+</li>
+<li>mock/fake<ul>
+<li>mongodb-memory-server</li>
+<li><a href="https://github.com/stipsan/ioredis-mock">https://github.com/stipsan/ioredis-mock</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="满足各种测试配置功能"><a href="#满足各种测试配置功能" class="headerlink" title="满足各种测试配置功能"></a>满足各种测试配置功能</h3>]]></content>
+      <tags>
+        <tag>workflow</tag>
+        <tag>test</tag>
+        <tag>nodejs</tag>
+        <tag>nestjs</tag>
+      </tags>
   </entry>
   <entry>
     <title>搭建简单的gitlab服务,在k8s环境</title>
@@ -130,59 +186,9 @@
       </tags>
   </entry>
   <entry>
-    <title>几张照片</title>
-    <url>/some-pic/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/39962BF9-3D91-4076-8BE3-A85DD3D78F35_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/8E6375ED-C3F3-4A86-A240-D3D3E7E755DD_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/ACE01CCC-1967-4B88-9931-B0644BC36614_1_105_c.jpeg"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/0FD08562-34EA-4B7B-9001-A05416F10D96_1_105_c.jpeg"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于测试nestjs的工作流</title>
-    <url>/test-nestjs-workflow/</url>
-    <content><![CDATA[<p><code>填坑中</code></p>
-<h2 id="面向读者"><a href="#面向读者" class="headerlink" title="面向读者"></a>面向读者</h2><ul>
-<li>产品/项目经理: 了解开发和测试在做的事情, 重要性</li>
-<li>开发: 掌握工作流, 知道工作流覆盖的范围, 能/不能保证什么</li>
-<li>测试:<ul>
-<li>理解开发做的事情和流程, 会使用工作流的结果, 需要对开发的结果输出做严格检查</li>
-<li>基于开发的测试结果, 设计回归测试</li>
-</ul>
-</li>
-</ul>
-<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><h3 id="关于测试的几种类型"><a href="#关于测试的几种类型" class="headerlink" title="关于测试的几种类型"></a>关于测试的几种类型</h3><ul>
-<li><a href="../test-type-concepts">关于测试类型的定义/释义</a></li>
-</ul>
-<h3 id="关于测试的几种方式"><a href="#关于测试的几种方式" class="headerlink" title="关于测试的几种方式"></a>关于测试的几种方式</h3><ul>
-<li>stub / mock</li>
-<li>fake</li>
-</ul>
-<h2 id="搭建一个合格的仓库-包含基本的工作流"><a href="#搭建一个合格的仓库-包含基本的工作流" class="headerlink" title="搭建一个合格的仓库, 包含基本的工作流"></a>搭建一个合格的仓库, 包含基本的工作流</h2><ul>
-<li>示例代码: <a href="https://github.com/lovepocky/sample-workflow-test-nestjs">https://github.com/lovepocky/sample-workflow-test-nestjs</a></li>
-</ul>
-<h3 id="使用的技术栈"><a href="#使用的技术栈" class="headerlink" title="使用的技术栈"></a>使用的技术栈</h3><ul>
-<li>webframework<ul>
-<li>nestjs</li>
-</ul>
-</li>
-<li>test framework<ul>
-<li>jest</li>
-</ul>
-</li>
-<li>mock/fake<ul>
-<li>mongodb-memory-server</li>
-<li><a href="https://github.com/stipsan/ioredis-mock">https://github.com/stipsan/ioredis-mock</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="满足各种测试配置功能"><a href="#满足各种测试配置功能" class="headerlink" title="满足各种测试配置功能"></a>满足各种测试配置功能</h3>]]></content>
-      <tags>
-        <tag>workflow</tag>
-        <tag>test</tag>
-        <tag>nodejs</tag>
-        <tag>nestjs</tag>
-      </tags>
+    <title>how-to-maintain-blog</title>
+    <url>/how-to-maintain-blog/</url>
+    <content><![CDATA[<h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 [how to maintain a blog]"></a>如何维护一个博客 [how to maintain a blog]</h1>]]></content>
   </entry>
   <entry>
     <title>关于测试类型的定义/释义</title>
@@ -364,13 +370,12 @@
       </tags>
   </entry>
   <entry>
-    <title>hello-hexo</title>
-    <url>/hello-hexo/</url>
-    <content><![CDATA[<h1 id="hello-Hexo"><a href="#hello-Hexo" class="headerlink" title="hello Hexo"></a>hello Hexo</h1><h2 id="local-image"><a href="#local-image" class="headerlink" title="local image"></a>local image</h2><p><img src="https://github.com/lovepocky/imgbed/raw/main/blog/20201228234204.png" alt="github bed"></p>
+    <title>几张照片</title>
+    <url>/some-pic/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/39962BF9-3D91-4076-8BE3-A85DD3D78F35_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/8E6375ED-C3F3-4A86-A240-D3D3E7E755DD_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/ACE01CCC-1967-4B88-9931-B0644BC36614_1_105_c.jpeg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lovepocky/imgbed/blog/0FD08562-34EA-4B7B-9001-A05416F10D96_1_105_c.jpeg"></p>
 ]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Example</tag>
-      </tags>
   </entry>
 </search>

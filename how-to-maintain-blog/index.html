@@ -20,15 +20,19 @@
     var CONFIG = {"hostname":"lovepocky.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lovepocky&#39;s blog">
-<meta property="og:url" content="https://lovepocky.github.io/archives/2022/08/index.html">
+  <meta name="description" content="如何维护一个博客 [how to maintain a blog]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="how-to-maintain-blog">
+<meta property="og:url" content="https://lovepocky.github.io/how-to-maintain-blog/index.html">
 <meta property="og:site_name" content="lovepocky&#39;s blog">
+<meta property="og:description" content="如何维护一个博客 [how to maintain a blog]">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-08-25T07:25:19.000Z">
+<meta property="article:modified_time" content="2022-08-25T07:27:13.512Z">
 <meta property="article:author" content="lovepocky">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lovepocky.github.io/archives/2022/08/">
+<link rel="canonical" href="https://lovepocky.github.io/how-to-maintain-blog/">
 
 
 <script id="page-configurations">
@@ -36,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Archive | lovepocky's blog</title>
+  <title>how-to-maintain-blog | lovepocky's blog</title>
   
 
 
@@ -196,56 +200,83 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 7 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lovepocky.github.io/how-to-maintain-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="lovepocky">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lovepocky's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          how-to-maintain-blog
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-08-25 15:25:19 / Modified: 15:27:13" itemprop="dateCreated datePublished" datetime="2022-08-25T15:25:19+08:00">2022-08-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 [how to maintain a blog]"></a>如何维护一个博客 [how to maintain a blog]</h1>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-25T15:25:19+08:00"
-              content="2022-08-25">
-          08-25
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/how-to-maintain-blog/" itemprop="url">
-            <span itemprop="name">how-to-maintain-blog</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/setup-simple-gitlab-in-k8s/" rel="prev" title="搭建简单的gitlab服务,在k8s环境">
+      <i class="fa fa-chevron-left"></i> 搭建简单的gitlab服务,在k8s环境
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -292,6 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%BB%B4%E6%8A%A4%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2-how-to-maintain-a-blog"><span class="nav-number">1.</span> <span class="nav-text">如何维护一个博客 [how to maintain a blog]</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -411,6 +443,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8eaaeb9a6d3b18256cd5',
+      clientSecret: '359d94cb6e8f2d155e2b92bfd848238d0acb77f5',
+      repo        : 'lovepocky.github.io',
+      owner       : 'lovepocky',
+      admin       : ['lovepocky'],
+      id          : 'd7a8bb767cd272439dd78eb974648bff',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
