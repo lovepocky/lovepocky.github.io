@@ -188,9 +188,41 @@
   <entry>
     <title>如何维护一个博客</title>
     <url>/how-to-maintain-blog/</url>
-    <content><![CDATA[<h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 how to maintain a blog"></a>如何维护一个博客 how to maintain a blog</h1>]]></content>
+    <content><![CDATA[<h1 id="如何维护一个博客-how-to-maintain-a-blog"><a href="#如何维护一个博客-how-to-maintain-a-blog" class="headerlink" title="如何维护一个博客 how to maintain a blog"></a>如何维护一个博客 how to maintain a blog</h1><h2 id="内容分类"><a href="#内容分类" class="headerlink" title="内容分类"></a>内容分类</h2><ul>
+<li>category<ul>
+<li><code>基础设施</code><ul>
+<li>电子产品</li>
+<li>软件工具</li>
+<li>…</li>
+</ul>
+</li>
+<li><code>生活</code></li>
+<li><code>经济</code></li>
+<li><code>软件开发</code></li>
+</ul>
+</li>
+<li>tag</li>
+</ul>
+<h2 id="维护管理"><a href="#维护管理" class="headerlink" title="维护管理"></a>维护管理</h2><ul>
+<li>主站:<ul>
+<li>github pages</li>
+</ul>
+</li>
+<li>图床:<ul>
+<li>picgo -&gt; github, cdn.jsdelivr</li>
+</ul>
+</li>
+</ul>
+<h2 id="装点门面"><a href="#装点门面" class="headerlink" title="装点门面"></a>装点门面</h2><h3 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h3><ul>
+<li><a href="https://github.com/Ailln/awesome-hexo-theme">https://github.com/Ailln/awesome-hexo-theme</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>基础设施</category>
+      </categories>
       <tags>
         <tag>基础设施</tag>
+        <tag>开坑</tag>
       </tags>
   </entry>
   <entry>
